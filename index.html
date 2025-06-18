@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The North Shop</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body>
+    <header>
+  <div class="logo_title">
+    <img class="logo" src="img/logo-stark-transparent.png" alt="Game of Thrones">
+    <h1>The North Shop</h1>
+  </div>
+
+  <div class="nav-container">
+    <button class="menu-toggle" aria-label="Abrir menú">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+    <ul class="nav-list">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="#seccionproductos">Productos</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+      <li><a href="#"><i class="fa-solid fa-cart-shopping"></i></a></li>
+    </ul>
+  </div>
+</header>
+
+    <main>
+        <article>
+            <img src="img/GOT main.jpg" alt="GOT">
+            <h1>¿A qué casa juras lealtad?</h1>
+        </article>
+    </main>
+
+    <section id="seccionproductos">
+        <h2>Productos</h2>
+        <div class="productos">
+            <div class="producto">
+                <img src="img/hoodie-lannister.jpg" alt="hoddie casa lannister">
+                <div class="producto-info">
+                    <h4>Hoodie casa Lannister</h4>
+                    <p>$30.000</p>
+                </div>
+            </div>
+
+            <div class="producto">
+                <img src="img/remera-stark.jpg" alt="remera casa stark">
+                <div class="producto-info">
+                    <h4>Remera casa Stark</h4>
+                    <p>$25.000</p>
+                </div>
+            </div>
+
+            <div class="producto">
+                <img src="img/remera-johnsnow.jpg" alt="Remera John Snow">
+                <div class="producto-info">
+                    <h4>Remera John Snow</h4>
+                    <p>$25.000</p>
+                </div>
+            </div>
+            <div class="producto">
+                <img src="img/remera-GOT.jpg" alt="Remera game of thrones">
+                <div class="producto-info">
+                    <h4>Remera Game Of Thrones</h4>
+                    <p>$25.000</p>
+                </div>
+            </div>
+            <div class="producto">
+                <img src="img/gorra-casa-lannister.jpg" alt="Gorra casa lannister">
+                <div class="producto-info">
+                    <h4>Gorra casa Lannister</h4>
+                    <p>$12.000</p>
+                </div>
+            </div>
+            <div class="producto">
+                <img src="img/gorra-dracarys.jpg" alt="Gorra Dracarys">
+                <div class="producto-info">
+                    <h4>Gorra Dracarys</h4>
+                    <p>$12.000</p>
+                </div>
+            </div>
+            <div class="producto">
+                <img src="img/funda-GOT.jpg" alt="Funda GOT">
+                <div class="producto-info">
+                    <h4>Funda Game Of Thrones</h4>
+                    <p>$10.000</p>
+                </div>
+            </div>
+            <div class="producto">
+                <img src="img/funda-winter-is-coming.jpg" alt="Funda winter is coming">
+                <div class="producto-info">
+                    <h4>Funda winter is coming</h4>
+                    <p>$10.000</p>
+                </div>
+            </div>
+            <div class="producto">
+                <img src="img/funda-lannister.jpg" alt="Funda Casa Lannister">
+                <div class="producto-info">
+                    <h4>Funda casa Lannister</h4>
+                    <p>$10.000</p>
+                </div>
+            </div>
+            <div class="producto">
+                <img src="img/mate.jpg" alt="matero GOT">
+                <div class="producto-info">
+                    <h4>Matero Game Of Thrones</h4>
+                    <p>$18.000</p>
+                </div>
+            </div>
+            <div class="producto">
+                <img src="img/monopoly.jpg" alt="Monopoly GOT">
+                <div class="producto-info">
+                    <h4>Monopoly Game Of Thrones</h4>
+                    <p>$20.500</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <a id= "contacto"></a>
+    <section class="contacto-container">
+        <div class="mapa">
+             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3282.305746642574!2d-58.41890328477034!3d-34.59729398046145!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca9117f1368f%3A0xa28f3b58289b4d88!2sAlto%20Palermo!5e0!3m2!1ses!2sar!4v1717447008217!5m2!1ses!2sar" 
+                     allowfullscreen="" 
+                     loading="lazy" 
+                     referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+        </div>
+    <aside>
+          <form action="" method="POST">
+            <label for="nombre">Nombre:</label>
+            <input type="text" name="nombre" id="nombre" placeholder="Por favor ingrese su nombre">
+            <label for="email">Correo electrónico:</label>
+            <input type="email" name="mail" id="mail" placeholder="Por favor ingrese su correo electronico">
+            <label for="mensaje">Mensaje:</label>
+            <textarea name="mensaje" id="mensaje" rows="4" cols="50" placeholder="Escriba un mensaje"></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </aside>
+
+</section>
+
+<section class="slider-resenias">
+  <button class="arrow left" onclick="scrollResenias(-1)">
+  <i class="fa-solid fa-circle-chevron-left"></i>
+</button>
+  <div class="resenias-slider" id="reseniasSlider">
+    <div class="card">
+      <img src="img/resenia-uno.jpg" alt="resenia">
+      <div class="card-content">
+        <div>
+          <span class="card-name">Ricardo Gómez</span><br>
+          <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><br>
+          <span class="card-date">02/03/25</span>
+        </div>
+        <p>Me encantó mi remera, la tela es muy cómoda y la impresión de excelente calidad</p>
+      </div>
+    </div>
+    <div class="card">
+            <img src="img/resenia-dos.jpg" alt="resenia">
+            <div class="card-content">
+                <div>
+                    <span class="card-name">Andrea Martinez</span><br>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i><br>
+                    <span class="card-date">03/22/25</span>
+                </div>
+                <p>Mi pedido se retrasó una semana, pero llegó todo bien</p>
+            </div>
+        </div>
+    <div class="card">
+            <img src="img/resenia-tres.jpg" alt="resenia">
+            <div class="card-content">
+                <div>
+                    <span class="card-name">Ana Marquez</span><br>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i><br>
+                    <span class="card-date">22/03/25</span>
+                </div>
+                <p>La taza de Daenerys es perfecta! Me la llevo todos los días para el trabajo</p>
+            </div>
+        </div>
+    <div class="card">
+            <img src="img/resenia-cuatro.jpg" alt="resenia">
+            <div class="card-content">
+                <div>
+                    <span class="card-name">Pedro Rodriguez</span><br>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i><br>
+                    <span class="card-date">14/05/25</span>
+                </div>
+            <p>Pedí un buzo y me vino el talle incorrecto, sigo esperando el cambio</p>
+        </div>
+    </div>
+    <div class="card">
+            <img src="img/resenia-cinco.jpg" alt="resenia">
+            <div class="card-content">
+                <div>
+                    <span class="card-name">Daniela Rojas</span><br>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i><br>
+                    <span class="card-date">20/08/25</span><br>
+                </div>
+            <p>Mi tienda favorita!! Excelente calidad y precios</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="img/resenia-seis.jpg">
+        <div class="card-content">
+            <div>
+                <span class="card-name">Lucas Barrios</span><br>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i><br>
+                <span class="card-date">26/08/25</span><br>
+            </div>
+            <p>Muy recomendados</p>
+        </div>
+    </div>
+        <div class="card">
+        <img src="img/resenia-siete.jpg">
+        <div class="card-content">
+            <div>
+                <span class="card-name">Carmen Medina</span><br>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i><br>
+                <span class="card-date">12/10/25</span><br>
+            </div>
+            <p>A mi hijo le encantó su buzo de regalo</p>
+        </div>
+    </div>
+  </div>
+  <button class="arrow right" onclick="scrollResenias(1)">
+  <i class="fa-solid fa-circle-chevron-right"></i>
+</button>
+</section>
+
+<footer class="footer">
+  <div class="footer-contenido">
+    <div class="footer-izquierda">
+      <p><strong>Horarios:</strong></p>
+      <p>Lunes a Viernes: 10 a 18 hs</p>
+      <p>Sábados: 10 a 14 hs</p>
+    </div>
+
+    <div class="footer-centro">
+      <p>Todos los derechos reservados © 2025</p>
+    </div>
+
+    <div class="footer-derecha">
+      <div class="iconos-redes">
+        <p><strong>Seguinos en nuestras redes!</strong></p>
+        <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i> Instagram</a>
+        <a href="https://www.tiktok.com/es/" target="_blank"><i class="fa-brands fa-tiktok"></i> TikTok</a>
+        <a href="https://www.facebook.com/?locale=es_LA" target="_blank"><i class="fa-brands fa-facebook"></i> Facebook</a>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="script.js" defer></script>
+</body>
+</html>
