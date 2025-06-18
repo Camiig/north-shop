@@ -1,3 +1,4 @@
+console.log("✅ Script funcionando");
 
 const toggleBtn = document.querySelector('.menu-toggle');
 const navList = document.querySelector('.nav-list');
