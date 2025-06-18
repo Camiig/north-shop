@@ -85,7 +85,8 @@ h1{
   font-size: 1.8rem;
   cursor: pointer;
   color: black;
-  z-index: 1002;
+  position: relative;
+  z-index: 9999;
 }
 
 main{
