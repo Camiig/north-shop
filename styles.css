@@ -9,7 +9,7 @@ body{
     overflow-x: hidden;
 }
 
-header {
+header{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -34,7 +34,7 @@ h1{
     max-width: 120px;
 }
 
-.logo_title {
+.logo_title{
     display: flex;
     align-items: center;
     gap: 10px;
@@ -44,7 +44,7 @@ h1{
     white-space: nowrap;
 }
 
-.nav-list {
+.nav-list{
     display: flex;
     gap: 20px;
     padding: 10px 0;
@@ -58,18 +58,18 @@ h1{
     white-space: nowrap;
 }
 
-.nav-list li {
+.nav-list li{
     list-style: none;
 }
 
-.nav-list a {
+.nav-list a{
     color: black;
     font-weight: bold;
     text-decoration: none;
 }
 
 /*menu hamburguesa*/
-.nav-container {
+.nav-container{
   position: relative;
   display: flex;
   align-items: center;
@@ -78,7 +78,7 @@ h1{
 }
 
 /*Ocultar el menú hamburguesa por defecto*/
-.menu-toggle {
+.menu-toggle{
   display: none;
   background: none;
   border: none;
@@ -120,23 +120,69 @@ section h2{
 }
 
 .productos{
-    margin-top: 2rem;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(250px, 1fr));
+  gap: 2rem;
+  justify-content: center;
+  max-width: 1200px; 
+  margin: 0 auto;
+  padding: 2rem;
 }
 
-.producto{
-    background-color: #9e9e9e;
-    border: 1px solid gray;
-    border-radius: 10px;
+.producto img{
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 
 .producto-info{
     display: flex;
     padding: 0 1rem;
     flex-direction: column;
+    align-items: flex-start;
+}
+
+.producto{
+  background-color: #9e9e9e;
+  border: 1px solid gray;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 350px;
+  position: relative;
+  padding-bottom: 20px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.contenido-producto{
+  position: relative;
+  width: 100%;
+  padding-bottom: 40px; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.btn-agregar{
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background-color: #ffffffcc;
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 1rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  transition: background-color 0.2s ease;
+}
+
+.btn-agregar:hover{
+  background-color: #c19d53;
+  color: white;
 }
 
 section img{
@@ -145,7 +191,9 @@ section img{
   object-fit: cover;
 }
 
-.contacto-container {
+
+
+.contacto-container{
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
@@ -154,7 +202,7 @@ section img{
   align-items: center;
 }
 
-.mapa {
+.mapa{
   flex: 1;
   min-width: 280px;
   max-width: 400px;
@@ -164,13 +212,13 @@ section img{
   box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
 }
 
-.mapa iframe {
+.mapa iframe{
   width: 100%;
   height: 100%;
   border: none;
 }
 
-aside {
+aside{
   flex: 1.2;
   min-width: 300px;
   max-width: 480px;
@@ -185,19 +233,19 @@ aside {
   justify-content: center;
 }
 
-aside form {
+aside form{
   display: flex;
   flex-direction: column;
   gap: 15px;
 }
 
-aside label {
+aside label{
   font-weight: bold;
   margin-bottom: 5px;
 }
 
 aside input,
-aside textarea {
+aside textarea{
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 8px;
@@ -206,7 +254,7 @@ aside textarea {
   box-sizing: border-box;
 }
 
-aside button {
+aside button{
   background-color: #c19d53;
   color: #fff;
   border: none;
@@ -217,11 +265,62 @@ aside button {
   transition: background-color 0.3s ease;
 }
 
-aside button:hover {
+aside button:hover{
   background-color: #a68436;
 }
+
+/*carrito*/
+.carrito-container{
+  background-color: #fdf6ff; 
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 500px;
+  margin: 40px auto;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+  color: #2c2c2c;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+#carrito-container h3{
+  margin-bottom: 20px;
+  font-size: 20px;
+  color: #a68436; 
+}
+
+.carrito-item{
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 12px 15px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn-eliminar{
+  background-color: #d9534f;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-eliminar i{
+  color: white;
+  font-size: 14px;
+}
+
+.btn-eliminar:hover{
+  background-color: #c9302c;
+}
+
 /*resenias*/
-.slider-resenias {
+.slider-resenias{
   display: flex;
   align-items: center;
   justify-content: center;
@@ -230,7 +329,7 @@ aside button:hover {
   overflow: hidden;
 }
 
-.resenias-slider {
+.resenias-slider{
   display: flex;
   overflow-x: auto;
   scroll-behavior: smooth;
@@ -238,11 +337,11 @@ aside button:hover {
   scrollbar-width: none;
 }
 
-.resenias-slider::-webkit-scrollbar {
+.resenias-slider::-webkit-scrollbar{
   display: none;
 }
 
-.card {
+.card{
   flex: 0 0 auto;
   width: 250px;
   background-color: #9e9e9e;
@@ -252,14 +351,14 @@ aside button:hover {
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-.card img {
+.card img{
   width: 100%;
   height: 150px;
   object-fit: cover;
   border-radius: 8px;
 }
 
-.arrow {
+.arrow{
   font-size: 2.5rem;
   background: none;
   border: none;
@@ -269,22 +368,22 @@ aside button:hover {
   transition: transform 0.2s ease;
 }
 
-.arrow:hover {
+.arrow:hover{
   transform: scale(1.1);
 }
 
-.arrow i {
+.arrow i{
   pointer-events: none; 
 }
 
-.footer {
+.footer{
   background-color: #969696;
   color: #000000;
   width: 100%;
   padding: 0;
 }
 
-.footer-contenido {
+.footer-contenido{
   display: flex;
   justify-content: space-between;
   align-items: stretch; /* todos los hijos ocupan mismo alto */
@@ -294,12 +393,12 @@ aside button:hover {
 }
 
 .footer-izquierda,
-.footer-derecha {
+.footer-derecha{
   flex: 1;
   min-width: 200px;
 }
 
-.footer-centro {
+.footer-centro{
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -307,17 +406,17 @@ aside button:hover {
   align-items: center;       
 }
 
-.footer-centro p {
+.footer-centro p{
   margin: 0;
   padding-bottom: 5px;
 }
 
-.footer-derecha {
+.footer-derecha{
   display: flex;
   justify-content: flex-end;  
 }
 
-.iconos-redes {
+.iconos-redes{
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -325,18 +424,18 @@ aside button:hover {
   padding: 0; 
 }
 
-.iconos-redes a {
+.iconos-redes a{
   color: #000000;
   text-decoration: none;
 }
 
-@media (max-width: 830px) {
+@media (max-width: 830px){
 
-  .menu-toggle {
+  .menu-toggle{
     display: block;
   }
 
-.nav-list {
+.nav-list{
   display: none;
   flex-direction: column;
   position: fixed;         
@@ -350,43 +449,48 @@ aside button:hover {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-  .nav-list.active {
+  .nav-list.active{
     display: flex;
     align-items: center;
   }
 
-  .logo {
+  .logo{
     height: 80px;
     max-width: 100px;
   }
 
-  .logo_title {
+  .logo_title{
     gap: 6px;
     font-size: 15px;
   }
 
-  main {
+  main{
     padding: 20px;
   }
 
-  section img {
+  .productos{
+    grid-template-columns: repeat(2, 1fr); 
+  }
+
+
+  section img{
     width: 300px;
     height: 225px;
   }
 
-  aside {
+  aside{
     min-width: 250px;
     max-width: 3200px;
     padding: 20px;
   }
 
   aside input,
-  aside textarea {
+  aside textarea{
     font-size: 0.9rem;
     padding: 8px;
   }
 
-  aside button {
+  aside button{
     padding: 10px;
     font-size: 0.95rem;
   }
@@ -396,56 +500,22 @@ aside button:hover {
     max-width: 300px;
     height: 300px;
   }
-}
 
-@media (max-width: 480px) {
-  body {
+  #carrito-container{
+    max-width: 90%;
+    font-size: 15px;
+  }
+
+  .carrito-item{
     font-size: 14px;
   }
 
-  h1, h2, h3 {
-    font-size: 1.3rem;
-    text-align: center;
+  .btn-eliminar i{
+    font-size: 14px;
+    padding: 5px;
   }
 
-  section h2 {
-    font-size: 1.2rem;
-    margin-left: 0;
-  }
-
-   .contacto-container {
-    flex-direction: column;
-    padding: 20px;
-    gap: 20px;
-  }
-
-  .mapa,
-  aside {
-    width: 100%;
-    max-width: 90%;
-    height: auto;
-  }
-
-  aside {
-    width: 100%;
-    max-width: 90%;
-    padding: 12px;
-    height: auto; 
-    box-shadow: none;
-  }
-
-  aside input,
-  aside textarea {
-    font-size: 0.85rem;
-    padding: 8px;
-  }
-
-  aside button {
-    padding: 10px;
-    font-size: 0.9rem;
-  }
-
-  .footer-contenido {
+    .footer-contenido{
     flex-direction: column;
     align-items: center;
     text-align: center;
@@ -454,27 +524,104 @@ aside button:hover {
 
   .footer-izquierda,
   .footer-centro,
-  .footer-derecha {
+  .footer-derecha{
     flex: none;
     width: 100%;
     min-width: auto;
     justify-content: center;
   }
 
-  .iconos-redes {
+  .iconos-redes{
     align-items: center;
   }
+}
 
-  .card {
+@media (max-width: 480px){
+  body {
+    font-size: 14px;
+  }
+
+  h1, h2, h3{
+    font-size: 1.3rem;
+    text-align: center;
+  }
+
+  section h2{
+    font-size: 1.2rem;
+    margin-left: 0;
+  }
+
+  .productos{
+    grid-template-columns: 1fr; /* 1 columna */
+  }
+
+    #carrito-container{
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  .carrito-item{
+    flex-direction: row;
+    align-items: flex-start;
+    font-size: 13px;
+  }
+
+  .carrito-item span{
+    margin-bottom: 4px;
+  }
+
+  .btn-eliminar{
+    width: 24px;
+    height: 24px;
+    padding: 3px;
+  }
+
+  .btn-eliminar i{
+    font-size: 10px;
+  }
+
+   .contacto-container{
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .mapa,
+  aside{
+    width: 100%;
+    max-width: 90%;
+    height: auto;
+  }
+
+  aside{
+    width: 100%;
+    max-width: 90%;
+    padding: 12px;
+    height: auto; 
+    box-shadow: none;
+  }
+
+  aside input,
+  aside textarea{
+    font-size: 0.85rem;
+    padding: 8px;
+  }
+
+  aside button{
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+
+.card{
   width: 200px;
   padding: 0.8rem;
 }
 
-.card img {
+.card img{
   height: 120px;
 }
 
-.arrow {
+.arrow{
   display: none;
 }
 }
