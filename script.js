@@ -127,7 +127,10 @@ function mostrarProductos() {
 
 mostrarProductos();
 
-var carrito = [];
+
+var carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+actualizarCarrito();
+
 //Agregar evento para los botones de "agregar al carrito"
 var contenedor = document.getElementById("contenedor-productos");
 
@@ -195,6 +198,8 @@ function actualizarCarrito() {
 
   total.textContent = totalPrecio;
   cantidad.textContent = totalCantidad;
+
+  localStorage.setItem("carrito", JSON.stringify(carrito));
 }
 
 //Eliminar productos del carrito
@@ -214,5 +219,7 @@ function eliminarDelCarrito(nombreProducto) {
 
   actualizarCarrito();
 }
+
+
 
 
