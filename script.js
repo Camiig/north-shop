@@ -5,18 +5,22 @@ document.addEventListener('DOMContentLoaded', function () {
   const navList = document.querySelector('.nav-list');
 
   if (toggleBtn && navList) {
-    // Abre/cierra el menú al hacer click en el boton
-    toggleBtn.addEventListener('click', () =>{
-      navList.classList.toggle('active');
+    // Abre/cierra el menú al hacer click o touchstart en el botón
+    ['click', 'touchstart'].forEach(evento => {
+      toggleBtn.addEventListener(evento, () => {
+        navList.classList.toggle('active');
+      });
     });
 
     // Cierra el menú al hacer click en cualquier enlace del menu
     const navLinks = navList.querySelectorAll('a');
     navLinks.forEach(link => {
-      link.addEventListener('click', () =>{
-        navList.classList.remove('active');
+      ['click','touchstart'].forEach(evento =>{
+        link.addEventListener(evento, () => {
+          navList.classList.remove('active');
       });
     });
+  });
   }
 
   // Función para deslizar el carrusel de reseñas
@@ -219,17 +223,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     actualizarCarrito();
-  }
-
-    const pruebaBtn = document.querySelector('.menu-toggle');
-  if (pruebaBtn) {
-    ['click', 'touchstart'].forEach(evento => {
-      pruebaBtn.addEventListener(evento, function () {
-        alert(`¡Evento '${evento}' detectado el botón hamburguesa`);
-      });
-    });
-  } else {
-    alert("No se encontró el botón");
   }
 });
 
