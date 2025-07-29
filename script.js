@@ -220,19 +220,19 @@ document.addEventListener('DOMContentLoaded', function () {
 
     actualizarCarrito();
   }
-});
 
-// Prueba para detectar si el click en el botón hamburguesa funciona en celular
-document.addEventListener('DOMContentLoaded', function () {
-  const pruebaBtn = document.querySelector('.menu-toggle');
+    const pruebaBtn = document.querySelector('.menu-toggle');
   if (pruebaBtn) {
-    pruebaBtn.addEventListener('click', function () {
-      alert("¡Click en botón hamburguesa detectado en celular");
+    ['click', 'touchstart'].forEach(evento => {
+      pruebaBtn.addEventListener(evento, function () {
+        alert(`¡Evento '${evento}' detectado el botón hamburguesa`);
+      });
     });
   } else {
     alert("No se encontró el botón");
   }
 });
+
 
 
 
