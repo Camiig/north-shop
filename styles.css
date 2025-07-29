@@ -450,7 +450,7 @@ aside button:hover{
 }
 
   .nav-list.active{
-    display: flex !important;
+    display: flex;
     align-items: center;
   }
 
