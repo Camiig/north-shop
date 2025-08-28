@@ -4,11 +4,19 @@ document.addEventListener('DOMContentLoaded', function () {
   const toggleBtn = document.querySelector('.menu-toggle');
   const navList = document.querySelector('.nav-list');
 
-if (toggleBtn && navList){
-  // Abre/cierra el menú al hacer click en el boton
-  toggleBtn.addEventListener('click', () => {
+if (toggleBtn && navList) {
+  const toggleMenu = (e) => {
+    e.preventDefault();
     navList.classList.toggle('active');
-  });
+  };
+
+  // Eventos modernos que cubren mouse y touch
+  if (window.PointerEvent) {
+    toggleBtn.addEventListener('pointerup', toggleMenu);
+  } else {
+    toggleBtn.addEventListener('touchend', toggleMenu);
+    toggleBtn.addEventListener('click', toggleMenu);
+  }
 
   // Cierra el menú al hacer click en cualquier enlace del menu
   const navLinks = navList.querySelectorAll('a');
