@@ -433,18 +433,19 @@ aside button:hover{
 
   .menu-toggle{
     display: block;
+    padding: 10px;
   }
 
 .nav-list{
   display: none;
   flex-direction: column;
-  position: fixed;         
+  position: absolute;         
   top: 100px;               
   right: 0;
   background-color: #9e9e9e;
   padding: 12px 0;
   border-radius: 10px;
-  z-index: 2000;
+  z-index: 9999;
   width: 100%;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }

@@ -4,24 +4,20 @@ document.addEventListener('DOMContentLoaded', function () {
   const toggleBtn = document.querySelector('.menu-toggle');
   const navList = document.querySelector('.nav-list');
 
-  if (toggleBtn && navList) {
-    // Abre/cierra el menú al hacer click o touchstart en el botón
-    ['click', 'touchstart'].forEach(evento => {
-      toggleBtn.addEventListener(evento, () => {
-        navList.classList.toggle('active');
-      });
-    });
+if (toggleBtn && navList){
+  // Abre/cierra el menú al hacer click en el boton
+  toggleBtn.addEventListener('click', () => {
+    navList.classList.toggle('active');
+  });
 
-    // Cierra el menú al hacer click en cualquier enlace del menu
-    const navLinks = navList.querySelectorAll('a');
-    navLinks.forEach(link => {
-      ['click','touchstart'].forEach(evento =>{
-        link.addEventListener(evento, () => {
-          navList.classList.remove('active');
-      });
+  // Cierra el menú al hacer click en cualquier enlace del menu
+  const navLinks = navList.querySelectorAll('a');
+  navLinks.forEach(link => {
+    link.addEventListener('click', () =>{
+      navList.classList.remove('active');
     });
   });
-  }
+}
 
   // Función para deslizar el carrusel de reseñas
   function scrollResenias(direction){
