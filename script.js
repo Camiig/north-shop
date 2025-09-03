@@ -5,25 +5,17 @@ document.addEventListener('DOMContentLoaded', function () {
   const navList = document.querySelector('.nav-list');
 
 if (toggleBtn && navList) {
-  const toggleMenu = (e) => {
-    e.preventDefault();
-    navList.classList.toggle('active');
-  };
-
-  // Eventos modernos que cubren mouse y touch
-  if (window.PointerEvent) {
-  toggleBtn.addEventListener('pointerup', toggleMenu);
-} else {
-  toggleBtn.addEventListener('touchend', toggleMenu);
-}
-
-  // Cierra el menú al hacer click en cualquier enlace del menu
-  const navLinks = navList.querySelectorAll('a');
-  navLinks.forEach(link => {
-    link.addEventListener('click', () =>{
-      navList.classList.remove('active');
+    toggleBtn.addEventListener('click', () => {
+      navList.classList.toggle('active');
     });
-  });
+
+    // Cierra el menú al hacer click en cualquier enlace
+    const navLinks = navList.querySelectorAll('a');
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        navList.classList.remove('active');
+      });
+    });
 }
 
   // Función para deslizar el carrusel de reseñas
