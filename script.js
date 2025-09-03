@@ -12,11 +12,10 @@ if (toggleBtn && navList) {
 
   // Eventos modernos que cubren mouse y touch
   if (window.PointerEvent) {
-    toggleBtn.addEventListener('pointerup', toggleMenu);
-  } else {
-    toggleBtn.addEventListener('touchend', toggleMenu);
-    toggleBtn.addEventListener('click', toggleMenu);
-  }
+  toggleBtn.addEventListener('pointerup', toggleMenu);
+} else {
+  toggleBtn.addEventListener('touchend', toggleMenu);
+}
 
   // Cierra el menú al hacer click en cualquier enlace del menu
   const navLinks = navList.querySelectorAll('a');
