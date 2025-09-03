@@ -3,18 +3,22 @@ document.addEventListener('DOMContentLoaded', function () {
 
   const toggleBtn = document.querySelector('.menu-toggle');
   const navList = document.querySelector('.nav-list');
+  const navContainer = document.querySelector('.nav-container');
 
-if (toggleBtn && navList) {
-    toggleBtn.addEventListener('click', () => {
-      navList.classList.toggle('active');
+if (navContainer && navList) {
+    navContainer.addEventListener('click', (evento) => {
+        const botonMenu = evento.target.closest('.menu-toggle');
+        if (botonMenu) {
+            navList.classList.toggle('active');
+        }
     });
 
     // Cierra el menú al hacer click en cualquier enlace
     const navLinks = navList.querySelectorAll('a');
     navLinks.forEach(link => {
-      link.addEventListener('click', () => {
-        navList.classList.remove('active');
-      });
+        link.addEventListener('click', () => {
+            navList.classList.remove('active');
+        });
     });
 }
 
