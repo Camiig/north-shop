@@ -6,7 +6,6 @@ html{
 body{
     margin:0;
     background-color: #616161;
-    overflow-x: hidden;
 }
 
 header{
@@ -20,8 +19,7 @@ header{
     width: 100%;
     z-index: 1000;
     gap: 10px;
-    box-sizing: border-box;
-    overflow-x: hidden; 
+    box-sizing: border-box; 
 }
 
 h1{
